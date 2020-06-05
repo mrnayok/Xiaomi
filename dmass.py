@@ -34,14 +34,14 @@ async def userinfo(ctx, user: discord.Member):
     
 @commands.has_permissions(administrator=True)
 @client.command(pass_context = True)
-async def send(ctx, *, content: str):
+async def mi(ctx, *, content: str):
         for member in ctx.message.server.members:
             try:
                 await client.send_message(member, content)
-                await client.say("DM Sent To : {} :white_check_mark:  ".format(member))
+                await client.say("DM mi To : {} :white_check_mark:  ".format(member))
             except:
                 print("can't")
-                await client.say("DM can't Sent To : {} :x: ".format(member))
+                await client.say("DM can't mi To : {} :x: ".format(member))
 
 
 client.run("NzEyMjExNjI2Njg5OTUzODM0.XtoPiA.mXUSVrtAO-abGPxono9HGRQ1Jcw")                
